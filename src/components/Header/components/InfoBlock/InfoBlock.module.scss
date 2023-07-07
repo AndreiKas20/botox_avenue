@@ -1,0 +1,50 @@
+.block {
+  padding: 10px 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 68px;
+  &__address {
+    display: flex;
+    align-items: center;
+  }
+  &__listSocial {
+    display: flex;
+    align-items: center;
+    &__item {
+      margin-right: 24px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.address {
+  text-align: left;
+  max-width: 270px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 155.4%;
+  color: #FFF;
+}
+
+.text {
+  max-width: 170px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 158.9%;
+  color: #FFF;
+}
+
+.phone {
+  font-family: 'Lora';
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.1px;
+  color: #FFFFFF;
+}

@@ -1,0 +1,64 @@
+.btn {
+  position: relative;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  transition: color .2s ease-in-out;
+  svg {
+    path {
+      transition: stroke .2s ease-in-out;
+    }
+  }
+  &__pink {
+    color: #1D1D1A;
+    svg {
+      path {
+        stroke: #B68C6E;
+      }
+    }
+  }
+  &__white {
+    color: #FFFFFF;
+    &:hover {
+      svg {
+        path {
+          stroke: #f3d5ca;
+        }
+      }
+    }
+    &:active {
+      svg {
+        path {
+          stroke: #8c7878;
+        }
+      }
+    }
+  }
+  &:hover {
+    color: #f3d5ca;
+  }
+  &:active {
+    color: #8c7878;
+  }
+  &__textBlock {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: 45%;
+    &__pink {
+      svg {
+        path {
+          fill: #B68C6E;
+        }
+      }
+    }
+    svg {
+      margin-right: 15px;
+    }
+
+  }
+}
