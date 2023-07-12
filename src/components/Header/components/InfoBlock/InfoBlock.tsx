@@ -6,8 +6,7 @@ const  InfoBlock = () => {
     return (
         <div className={styles.block}>
             <div className={styles.block__address}>
-                <img width={'140px'} alt={'sda'} src={Logo}/>
-                <span className={styles.text}>Что-то для волос в Рязани c длинным текстом</span>
+                <img style={{marginRight: '42px'}} width={'140px'} alt={'sda'} src={Logo}/>
                 <address className={styles.address}>Рязань,<br></br> шоссейный переулок 5, офис 26</address>
             </div>
                 <ul className={styles.block__listSocial}>

@@ -4,11 +4,16 @@ import SignUpBtn from "../../../../UI/SignUpBtn/SignUpBtn";
 
 const ContentBlock = () => {
     return (
-        <div className={styles.block}>
-            <h1 className={styles.title}>Что-то с волосами длинной шесть слов</h1>
-            <span className={styles.slogan}>Мини слоган</span>
-            <div className={styles.btnBlock}>
-                <SignUpBtn color={'white'} />
+        <div className={styles.container}>
+            <div className={styles.blockLeft}>
+                <h1 className={styles.title}>Кератиновое выпрямление<br/> ботокс<br/> нанопластика<br/> холодное восстановление</h1>
+                <span className={styles.slogan}>От нас вы получите гарантию идеального результата от процедуры и погрузитесь в атмосферу заботы и расслабления.</span>
+                <div className={styles.btnBlock}>
+                    <SignUpBtn color={'white'} />
+                </div>
+            </div>
+            <div className={styles.blockRight}>
+                <span className={styles.backImg}/>
             </div>
         </div>
     );

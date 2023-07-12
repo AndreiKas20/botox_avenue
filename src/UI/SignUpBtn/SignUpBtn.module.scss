@@ -19,6 +19,20 @@
         stroke: #B68C6E;
       }
     }
+    &:hover {
+      svg {
+        path {
+          stroke: #f3d5ca;
+        }
+      }
+    }
+    &:active {
+      svg {
+        path {
+          stroke: #8c7878;
+        }
+      }
+    }
   }
   &__white {
     color: #FFFFFF;
@@ -59,6 +73,5 @@
     svg {
       margin-right: 15px;
     }
-
   }
 }
