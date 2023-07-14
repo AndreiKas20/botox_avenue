@@ -1,10 +1,17 @@
 .block {
+  position: relative;
   padding: 72px 240px;
   background-color: #696765;
 }
 
 .serviceSection {
   display: flex;
+  justify-content: space-between;
+}
+
+.leftSide {
+ flex-basis: 55%;
+  margin-right: 32px;
 }
 
 .imgBotox {
@@ -16,6 +23,9 @@
 .blockImg {
   position: relative;
   margin-right: auto;
+  height: fit-content;
+  width: fit-content;
+  margin-bottom: 92px;
   &:before {
     content: '';
     position: absolute;
@@ -29,9 +39,19 @@
 }
 
 .blockServ {
-  padding: 25px;
-  border-radius: 10px;
   max-width: 750px;
+  position: relative;
+  height: fit-content;
+  margin-bottom: 48px;
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #eaa4a4;
+    bottom: -24px;
+    left: 0;
+  }
 }
 
 .subtitle {
@@ -61,37 +81,26 @@
   }
 }
 
-.accordion {
-  border: none !important;
-  outline: none !important;
-  box-shadow: none!important;
-  background: none !important;
-}
-
-.blockAcc {
-  padding: 0 !important;
-  div {
-    justify-content: right;
-  }
-}
-
 .advText {
+  margin-bottom: 24px;
   text-align: right;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 180%;
   color: #FFFFFF;
+  span {
+    color: #eaa4a4;
+  }
 }
 
 .btnAccordion {
-  text-align: right!important;
-  font-size: 16px!important;
-  font-style: normal!important;
-  font-weight: 600!important;
-  line-height: 140%!important;
-  text-transform: uppercase!important;
-  transition: .2s ease-in-out color!important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  text-transform: uppercase;
+  transition: .2s ease-in-out color;
   color: #eaa4a4;
   &:hover {
     color: #e1bdb5;
@@ -100,3 +109,73 @@
     color: #ec826a;
   }
 }
+
+.blockImgRightSide {
+  text-align: right;
+  margin-bottom: 48px;
+  img {
+    border-radius: 10px;
+    box-shadow: 0 0 20px 10px #eaa4a4;
+  }
+}
+
+.iconBackLine {
+  position: absolute;
+  height: 50%;
+  top:0;
+}
+
+.iconBackLine2 {
+  position: absolute;
+  height: 45%;
+  left: 20%;
+  bottom: 10%;
+}
+
+.iconBackEl {
+  position: absolute;
+  top: 30%;
+  left: 0;
+}
+
+.iconBackVector {
+  position: absolute;
+  top: 70%;
+  left: 0;
+}
+
+.iconLogo {
+  position: absolute;
+  z-index: 4;
+  width: 210px;
+  bottom: -40px;
+  right: -100px;
+}
+
+.modal {
+  &__modalTitle {
+    font-size: 16.568px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 105%;
+    text-transform: uppercase;
+    font-family: 'Prata' !important;
+    span {
+      color: #eaa4a4;
+    }
+  }
+  &__modalSubtitle {
+    margin-bottom: 15px;
+  }
+  &__selectTitle {
+    color: #eaa4a4 !important;
+  }
+
+  &__btn {
+    color: #eaa4a4 !important;
+    &:disabled {
+      color: gray !important;
+    }
+  }
+}
+
