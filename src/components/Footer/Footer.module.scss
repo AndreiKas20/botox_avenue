@@ -1,0 +1,162 @@
+.block {
+  position: relative;
+  width: 100%;
+  padding: 52px 240px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1c1a1a;
+}
+
+.leftSide {
+    box-shadow: 0 0 25px 15px #eaa4a4;
+}
+
+.addressBlock {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  &__addressWord {
+    margin-bottom: 20px;
+    display: block;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 22.4px */
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  &__address {
+    text-align: left;
+    width: 100%;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140.4%;
+    color: #FFFFFF;
+  }
+}
+
+.rightSide {
+  position: relative;
+}
+
+.phoneSocialBlock {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  &__phoneWord {
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110.4%;
+    color: #FFFFFF;
+  }
+  &__phoneNumber {
+    text-align: left;
+    width: 100%;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140.4%;
+    color: #FFFFFF;
+    margin-bottom: 32px;
+    transition: .2s ease-in-out color;
+    &:hover {
+      color: #f3d5ca;
+    }
+    &:active {
+      color: #8c7878;
+    }
+  }
+
+  &__socialWord {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110.4%;
+    color: #FFFFFF;
+  }
+
+  &__listSocial {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  &__item {
+    cursor: pointer;
+    a {
+      svg {
+        path {
+          transition: .2s ease-in-out fill;
+        }
+      }
+    }
+    &:hover {
+      a {
+        svg {
+          path {
+            fill: #f3d5ca;
+          }
+        }
+      }
+    }
+    &:active {
+      a {
+        svg {
+          path {
+            fill: #8c7878;
+          }
+        }
+      }
+    }
+  }
+}
+
+.blockIcon {
+  width: 250px;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  z-index: 2;
+}
+
+.copy {
+  padding: 2px;
+  background-color: #eaa4a4;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width: 1600px) {
+  .block {
+    padding: 22px 60px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .block {
+    flex-direction: column;
+    align-items: center;
+  }
+  .leftSide {
+    margin-bottom: 32px;
+  }
+  .blockIcon {
+    position: relative;
+  }
+}

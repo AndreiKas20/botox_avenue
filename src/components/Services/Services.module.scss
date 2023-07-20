@@ -84,10 +84,17 @@
     font-style: normal;
     font-weight: 400;
     line-height: 164.9%;
+    transition: .2s ease-in-out color;
+    &:hover {
+      color: #eaa4a4;
+    }
+    &:active {
+      color: #704d4d;
+    }
     img {
       margin-right: 20px;
     }
-    span {
+    a {
       text-align: left;
     }
   }
@@ -98,4 +105,62 @@
   z-index: -1;
   right: 0;
   top: -77px;
+}
+
+@media screen and (max-width: 1600px) {
+  .container {
+    padding: 92px 60px;
+  }
+  .photo {
+    width: 544px;
+  }
+
+  .photoBlock {
+    &:before {
+      left: -59px;
+    }
+    &:after {
+      left: -50px;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .photoBlock {
+    min-width: 400px;
+    &:before {
+      width: 400px;
+    }
+  }
+  .photo {
+    width: 444px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .container {
+    padding: 32px 60px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .photoBlock {
+    margin-bottom: 90px;
+  }
+
+  .title {
+    position: relative;
+    left: 0;
+    font-size: 58px;
+  }
+
+  .listServices {
+    padding: 0;
+    margin-bottom: 32px;
+  }
+
+  .iconLine {
+    right: 50%;
+    bottom: 0;
+  }
 }

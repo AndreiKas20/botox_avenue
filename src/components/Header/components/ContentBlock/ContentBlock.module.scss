@@ -44,3 +44,23 @@
   background-image: url("../../../../assets/img/hair_back2.2.png");
   background-repeat: no-repeat;
 }
+
+@media screen and (max-width: 1600px) {
+  .blockRight {
+    right: -101px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .title {
+    font-size: 32px;
+  }
+  .slogan {
+    font-size: 16px;
+  }
+  .blockRight {
+    width: 344px;
+    height: 490px;
+    background-image: url("../../../../assets/img/hair_back2.2_mobile.png");
+  }
+}

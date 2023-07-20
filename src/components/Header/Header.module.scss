@@ -4,3 +4,9 @@
   background: url("../../assets/img/fon_header.jpg") no-repeat;
   background-size: auto;
 }
+
+@media screen and (max-width: 1600px) {
+  .block {
+    padding: 0 60px;
+  }
+}

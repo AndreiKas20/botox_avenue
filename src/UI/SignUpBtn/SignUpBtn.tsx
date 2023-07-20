@@ -3,7 +3,7 @@ import styles from "./SignUpBtn.module.scss";
 
 const SignUpBtn = ({color} : {color: 'pink' | 'white'}) => {
     return (
-        <button className={`${styles.btn} ${color === 'white' ? styles.btn__white : styles.btn__pink }`}>
+        <a href={'#call'} className={`${styles.btn} ${color === 'white' ? styles.btn__white : styles.btn__pink }`}>
             <svg width="147" height="145" viewBox="0 0 147 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M140.753 19.7846C116.677 -14.8252 24.8861 3.23236 6.82867 43.861C-11.2287 84.4896 15.857 118.568 60.9999 119.099C106.143 119.63 164.829 54.3944 140.753 19.7846Z"
@@ -20,7 +20,7 @@ const SignUpBtn = ({color} : {color: 'pink' | 'white'}) => {
                 </svg>
             ЗАПИСАТЬСЯ
             </span>
-        </button>
+        </a>
     );
 };
 

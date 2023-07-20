@@ -5,6 +5,7 @@
   justify-content: space-between;
   margin-bottom: 68px;
   &__address {
+    margin-right: auto;
     display: flex;
     align-items: center;
   }
@@ -13,14 +14,40 @@
     align-items: center;
     &__item {
       margin-right: 24px;
+      a {
+        svg {
+          path {
+           transition: .2s ease-in-out fill;
+          }
+        }
+      }
       &:last-child {
         margin-right: 0;
+      }
+      &:hover {
+        a {
+          svg {
+            path {
+              fill: #f3d5ca;
+            }
+          }
+        }
+      }
+      &:active {
+        a {
+          svg {
+            path {
+              fill: #8c7878;
+            }
+          }
+        }
       }
     }
   }
 }
 
 .address {
+  cursor: pointer;
   text-align: left;
   max-width: 270px;
   font-size: 14px;
@@ -28,6 +55,13 @@
   font-weight: 500;
   line-height: 155.4%;
   color: #FFF;
+  transition: .2s color ease-in-out;
+  &:hover {
+    color: #f3d5ca;
+  }
+  &:active {
+    color: #8c7878;
+  }
 }
 
 .text {
@@ -47,4 +81,35 @@
   line-height: normal;
   letter-spacing: 1.1px;
   color: #FFFFFF;
+  transition: .2s color ease-in-out;
+  &:hover {
+    color: #f3d5ca;
+  }
+  &:active {
+    color: #8c7878;
+  }
 }
+
+.listNav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  &__item {
+    cursor: pointer;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 30px;
+    transition: color .2s ease-in-out;
+    color: #FFFFFF;
+    &:hover {
+      color: #f3d5ca;
+    }
+    &:active {
+      color: #8c7878;
+    }
+  }
+}
+

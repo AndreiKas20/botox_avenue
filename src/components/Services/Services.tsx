@@ -18,16 +18,16 @@ const Services = () => {
         <div className={styles.container}>
             <div className={styles.photoBlock}> <img className={styles.photo} src={photoServ} alt={'Фото'}/> </div>
             <div className={styles.block}>
-                <h2 className={styles.title}>НАШИ <span>УСЛУГИ</span> </h2>
+                <h2 id={'serv'} className={styles.title}>НАШИ <span>УСЛУГИ</span> </h2>
                 <ul className={styles.listServices}>
-                    <li className={styles.listServices__item}><img className={styles.icon} alt={'icon'} src={botox}/> <span>Ботокс</span> </li>
-                    <li className={styles.listServices__item}><img className={styles.icon} alt={'icon'} src={plastic}/> <span>Пластика</span></li>
-                    <li className={styles.listServices__item}><img className={styles.icon} alt={'icon'} src={ceratin}/> <span>Кератин</span></li>
-                    <li className={styles.listServices__item}><img className={styles.icon} alt={'icon'} src={sos}/> <span>SOS-Уход</span></li>
-                    <li className={styles.listServices__item}><img className={styles.icon} alt={'icon'} src={oilCream}/> <span>Масляный уход</span></li>
-                    <li className={styles.listServices__item}><img className={styles.icon} alt={'icon'} src={nano}/> <span>Нанопластика</span></li>
-                    <li className={styles.listServices__item}><img className={styles.icon} alt={'icon'} src={piling}/> <span>Пилинг для кожи головы</span></li>
-                    <li className={styles.listServices__item}><img className={styles.icon} alt={'icon'} src={scissors}/> <span>Уход за кончиками</span></li>
+                    <li className={styles.listServices__item}><img className={styles.icon} alt={'icon'} src={botox}/> <a href={'#botox'}>Ботокс</a> </li>
+                    <li className={styles.listServices__item}><img className={styles.icon} alt={'icon'} src={plastic}/> <a href={'#plastic'}>Пластика</a></li>
+                    <li className={styles.listServices__item}><img className={styles.icon} alt={'icon'} src={ceratin}/> <a href={'#ceratin'}>Кератин</a></li>
+                    <li className={styles.listServices__item}><img className={styles.icon} alt={'icon'} src={sos}/> <a href={'#sos'}>SOS-Уход</a></li>
+                    <li className={styles.listServices__item}><img className={styles.icon} alt={'icon'} src={oilCream}/> <a href={'#oil'}>Масляный уход</a></li>
+                    <li className={styles.listServices__item}><img className={styles.icon} alt={'icon'} src={nano}/> <a href={'#nanoplast'}>Нанопластика</a></li>
+                    <li className={styles.listServices__item}><img className={styles.icon} alt={'icon'} src={piling}/> <a href={'#piling'}>Пилинг для кожи головы</a></li>
+                    <li className={styles.listServices__item}><img className={styles.icon} alt={'icon'} src={scissors}/> <a href={'#hair'}>Уход за кончиками</a></li>
                 </ul>
                 <SignUpBtn color={'pink'}/>
             </div>

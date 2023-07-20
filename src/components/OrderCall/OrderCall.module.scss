@@ -1,0 +1,115 @@
+.block {
+  position: relative;
+  padding: 92px 240px;
+  display: flex;
+  background-color: #696765;
+  justify-content: space-between;
+  &__leftBlock {
+    position: relative;
+    flex-basis: 50%;
+    &__form {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__rightBlock {
+    position: relative;
+    &__fon {
+      position: relative;
+      z-index: 2;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      top: -8%;
+      left: -10%;
+      width: 120%;
+      height: 115%;
+      background-color: #eaa4a4;
+      z-index: 1;
+    }
+  }
+}
+
+.title {
+  font-family: 'Prata';
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 128.5%; /* 64.25px */
+  letter-spacing: 1.5px;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+  span {
+    color: #eaa4a4;
+  }
+}
+
+.subtitle {
+  font-family: 'Prata';
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 128.5%; /* 64.25px */
+  letter-spacing: 1.5px;
+  color: #eaa4a4;
+  margin-bottom: 12px;
+}
+
+.inputForm {
+  border-radius: 5px;
+  input {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 184.5%; /* 36.9px */
+  }
+}
+
+.btn {
+  padding: 15px !important;
+  font-size: 18px !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 128.5%; /* 64.25px */
+  letter-spacing: 1.1px;
+  color: #eaa4a4 !important;
+  &:hover {
+    color: #FFFFFF !important;
+  }
+}
+
+.iconLogo {
+  position: absolute;
+  bottom: -10px;
+  right: -15px;
+  width: 160px;
+  z-index: 3;
+}
+
+.iconBackVector {
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+.message {
+  position: absolute;
+  left: 3px;
+  bottom: -40px;
+}
+
+@media screen and (max-width: 1600px) {
+  .block {
+    padding: 52px 60px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .block {
+    justify-content: center;
+    &__leftBlock {
+      flex-basis: 80%;
+    }
+  }
+}

@@ -57,6 +57,9 @@ const MoreServices = () => {
         setValueLongHair('')
         setOpen(false);
         setIsHairEnd(false)
+        setIsCloseHairEnd(false)
+        setIsCoolHair(false)
+        setIsPolishingHair(false)
     };
 
     const handleChangeHairSelect = (ev: SelectChangeEvent) => {
@@ -88,9 +91,17 @@ const MoreServices = () => {
         }
         setIsOpenPrice(true)
     }
+
+    const orderCall = () => {
+        handleClose()
+        setTimeout(() => {
+            window.location.href = '#call'
+        }, 0)
+    }
+
     useEffect(() => {
-        console.log('final price', finalPrice, nameService)
-    }, [finalPrice, nameService])
+        setIsOpenPrice(false)
+    }, [isCloseHairEnd, isPolishingHair, isSecondCheck, isFirstCheck, master, isCoolHair])
     return (
         <div className={styles.block}>
             <img alt={'icon'} className={styles.iconBackLine} src={iconBack1}/>
@@ -105,7 +116,7 @@ const MoreServices = () => {
                     </div>
                     <ul className={styles.listServices}>
                         <li className={styles.blockServ}>
-                            <h3 className={styles.subtitle}>Кератин</h3>
+                            <h3 id={'ceratin'} className={styles.subtitle}>Кератин</h3>
                             <ul className={styles.listServ}>
                                 <li className={styles.listServ__item}>Выпрямление любого завитка</li>
                                 <li className={styles.listServ__item}>Устранение пушистости и пористости</li>
@@ -120,7 +131,7 @@ const MoreServices = () => {
                             </button>
                         </li>
                         <li className={styles.blockServ}>
-                            <h3 className={styles.subtitle}>SOS-уход</h3>
+                            <h3 id={'sos'} className={styles.subtitle}>SOS-уход</h3>
                             <ul className={styles.listServ}>
                                 <li className={styles.listServ__item}>Подойдет осветленным и сухим волосам</li>
                                 <li className={styles.listServ__item}>Восстанавливает водный и липидный слой волоса на
@@ -136,12 +147,12 @@ const MoreServices = () => {
                             }} className={styles.btnAccordion}>Узнать цену
                             </button>
                         </li>
-                        <li className={styles.blockImg}>
+                        <div className={styles.blockImg}>
                             <img className={styles.imgBotox} src={img3} alt={'фото результата'}/>
                             <img className={styles.iconLogo} src={iconLogo} alt={'icon logo'}/>
-                        </li>
+                        </div>
                         <li className={styles.blockServ}>
-                            <h3 className={styles.subtitle}>Пилинг кожи головы</h3>
+                            <h3 id={'piling'} className={styles.subtitle}>Пилинг кожи головы</h3>
                             <ul className={styles.listServ}>
                                 <li className={styles.listServ__item}>Подходит для тех кто часто моет голову</li>
                                 <li className={styles.listServ__item}>Осмотр кожи головы трихоскопом</li>
@@ -159,7 +170,7 @@ const MoreServices = () => {
                             </button>
                         </li>
                         <li className={styles.blockServ}>
-                            <h3 className={styles.subtitle}>Уход за кончиками</h3>
+                            <h3 id={'hair'} className={styles.subtitle}>Уход за кончиками</h3>
                             <ul className={styles.listServ}>
                                 <li className={styles.listServ__item}>Подойдет осветленным и сухим волосам</li>
                                 <li className={styles.listServ__item}>Натуральным и поврежденным</li>
@@ -175,11 +186,12 @@ const MoreServices = () => {
                             </button>
                         </li>
                     </ul>
+                    <SignUpBtn color={"white"}/>
                 </div>
                 <div className={styles.rightSide}>
                     <ul className={styles.listServices}>
                         <li className={styles.blockServ}>
-                            <h3 className={styles.subtitle}>Ботокс</h3>
+                            <h3 id={'botox'} className={styles.subtitle}>Ботокс</h3>
                             <ul className={styles.listServ}>
                                 <li className={styles.listServ__item}>Подойдет осветленным волосам</li>
                                 <li className={styles.listServ__item}>Устранение пушистости</li>
@@ -194,7 +206,7 @@ const MoreServices = () => {
                             </button>
                         </li>
                         <li className={styles.blockServ}>
-                            <h3 className={styles.subtitle}>Пластика</h3>
+                            <h3 id={'plastic'} className={styles.subtitle}>Пластика</h3>
                             <ul className={styles.listServ}>
                                 <li className={styles.listServ__item}>Выпрямление легкой волны</li>
                                 <li className={styles.listServ__item}>Устранение пушистости</li>
@@ -212,7 +224,7 @@ const MoreServices = () => {
                                                                        alt={'фото результата'}/>
                         </div>
                         <li className={styles.blockServ}>
-                            <h3 className={styles.subtitle}>Масляный уход</h3>
+                            <h3 id={'oil'} className={styles.subtitle}>Масляный уход</h3>
                             <ul className={styles.listServ}>
                                 <li className={styles.listServ__item}>Процедура обогащенная лечебными маслами и
                                     кератином дает удивительный эффект для восстановления самых испорченных волос, в том
@@ -230,7 +242,7 @@ const MoreServices = () => {
                             </button>
                         </li>
                         <li className={styles.blockServ}>
-                            <h3 className={styles.subtitle}>Нанопластика</h3>
+                            <h3 id={'nanoplastic'} className={styles.subtitle}>Нанопластика</h3>
                             <ul className={styles.listServ}>
                                 <li className={styles.listServ__item}>Выпрямление тугого завитка. Кудри в све прежнее
                                     состояние не возвращаются
@@ -339,22 +351,22 @@ const MoreServices = () => {
                     }
                     {
                         !isIvanJoin &&
-                        <span>*Данную процедуру выполняет только топ-мастер Кристина</span>
+                        <span className={styles.modal__advTextMaster}>*Данную процедуру выполняет только топ-мастер Кристина</span>
                     }
                     {
                         isOpenPrice &&
                         <div className={styles.modal__blockPrice}>
-                            <span className={styles.modal__price}>{finalPrice}</span>
+                            <span className={styles.modal__price}>~{finalPrice}&#8381;</span>
                             <span className={styles.modal__advText}>*окончательная цена может отличаться как в большую так и в меньшую сторону</span>
                         </div>
                     }
                 </DialogContent>
                 <DialogActions>
                     {
-                        isOpenPrice && <Button className={styles.modal__btn} onClick={handleClose}>Записаться</Button>
+                        isOpenPrice && <Button className={styles.modal__btn} onClick={orderCall}>Записаться</Button>
                     }
                     <Button className={styles.modal__btn} onClick={handleClose}>Закрыть</Button>
-                    <Button className={styles.modal__btn} disabled={valueLongHair === '' && !isPolishingHair} onClick={handleGetPrice}>Узнать цену</Button>
+                    <Button className={styles.modal__btn} disabled={valueLongHair === '' && !isPolishingHair && nameService.value !== 'piling'} onClick={handleGetPrice}>Узнать цену</Button>
                 </DialogActions>
             </Dialog>
         </div>
