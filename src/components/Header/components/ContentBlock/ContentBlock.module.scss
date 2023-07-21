@@ -26,6 +26,7 @@
 }
 
 .slogan {
+  position: relative;
   text-align: left;
   max-width: 700px;
   font-size: 23px;
@@ -33,6 +34,7 @@
   font-weight: 400;
   line-height: 164.9%;
   color: #FFFFFF;
+  z-index: 2;
 }
 
 .blockRight {
@@ -61,6 +63,40 @@
   .blockRight {
     width: 344px;
     height: 490px;
+    background-image: url("../../../../assets/img/hair_back2.2_mobile.png");
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .title {
+    font-size: 22px;
+  }
+  .slogan {
+    font-size: 16px;
+    max-width: 350px;
+  }
+  .blockRight {
+    width: 344px;
+    height: 490px;
+    background-image: url("../../../../assets/img/hair_back2.2_mobile.png");
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    margin-right: 0;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .slogan {
+    font-size: 12px;
+    max-width: 350px;
+  }
+  .blockRight {
+    width: 200px;
+    height: 453px;
+    right: -20px;
     background-image: url("../../../../assets/img/hair_back2.2_mobile.png");
   }
 }

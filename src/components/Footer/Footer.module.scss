@@ -9,6 +9,10 @@
 
 .leftSide {
     box-shadow: 0 0 25px 15px #eaa4a4;
+  &__map {
+    width: 650px;
+    height: 420px;
+  }
 }
 
 .addressBlock {
@@ -146,6 +150,9 @@
   .block {
     padding: 22px 60px;
   }
+  .blockIcon {
+    left: calc(50% - 125px);
+  }
 }
 
 @media screen and (max-width: 1250px) {
@@ -158,5 +165,31 @@
   }
   .blockIcon {
     position: relative;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .leftSide {
+    &__map {
+      width: 400px;
+      height: 300px;
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .leftSide {
+    &__map {
+      width: 350px;
+      height: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 351px) {
+  .leftSide {
+    &__map {
+      width: 300px;
+      height: 300px;
+    }
   }
 }

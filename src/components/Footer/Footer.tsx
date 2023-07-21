@@ -9,7 +9,7 @@ const Footer = () => {
             <footer className={styles.block}>
                 <div id={'map'} className={styles.leftSide}>
                     <YMaps>
-                        <Map className={styles.leftSide__map} width={'650px'} height={'420px'} defaultState={{ center: [54.630618, 39.696642], zoom: 15 }}>
+                        <Map className={styles.leftSide__map}  defaultState={{ center: [54.630618, 39.696642], zoom: 15 }}>
                             <Placemark defaultGeometry={[54.630618, 39.696642]} />
                         </Map>
                     </YMaps>

@@ -26,6 +26,7 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import {listArr} from "../Services/listArrays";
 import SignUpBtn from "../../UI/SignUpBtn/SignUpBtn";
+import {useResize} from "../../hooks/useResize";
 
 export type itemPrice = {longHair: number, price: number}
 export type priceArr = itemPrice[]
@@ -45,6 +46,7 @@ const MoreServices = () => {
     const [isFirstCheck, setIsFirstCheck] = useState(false)
     const [finalPrice, setFinalPrice] = useState(0)
     const [isOpenPrice, setIsOpenPrice] = useState(false)
+    const [isMobile, setIsMobile] = useState(false)
 
     const handleClickOpen = (nameService: itemService, isIvanJoin: boolean) => {
         setIsIvanJoin(isIvanJoin)
@@ -99,9 +101,19 @@ const MoreServices = () => {
         }, 0)
     }
 
+    const size = useResize()
+
     useEffect(() => {
         setIsOpenPrice(false)
     }, [isCloseHairEnd, isPolishingHair, isSecondCheck, isFirstCheck, master, isCoolHair])
+
+    useEffect(() =>{
+        if (size < 1250) {
+            setIsMobile(true)
+        } else {
+            setIsMobile(false)
+        }
+    }, [size])
     return (
         <div className={styles.block}>
             <img alt={'icon'} className={styles.iconBackLine} src={iconBack1}/>
@@ -186,7 +198,9 @@ const MoreServices = () => {
                             </button>
                         </li>
                     </ul>
-                    <SignUpBtn color={"white"}/>
+                    {
+                        !isMobile && <SignUpBtn color={"white"}/>
+                    }
                 </div>
                 <div className={styles.rightSide}>
                     <ul className={styles.listServices}>
@@ -264,6 +278,9 @@ const MoreServices = () => {
                                                                        alt={'фото результата'}/>
                         </div>
                     </ul>
+                    {
+                        isMobile && <SignUpBtn color={'white'}/>
+                    }
                 </div>
             </div>
             <Dialog className={styles.modal} open={open} onClose={handleClose}>

@@ -20,8 +20,12 @@ const InfoBlock = () => {
         <div className={styles.block}>
             <div className={styles.block__address}>
                 <img style={{marginRight: '42px'}} width={'140px'} alt={'sda'} src={Logo}/>
-                <address className={styles.address}><a href={'#map'}>Рязань,<br></br> шоссейный переулок 5, офис 26</a>
-                </address>
+                {
+                    !isBurger &&
+                    <address className={styles.address}>
+                        <a href={'#map'}>Рязань,<br></br> шоссейный переулок 5, офис 26</a>
+                    </address>
+                }
             </div>
             {
                 !isBurger &&

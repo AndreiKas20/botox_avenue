@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 68px;
+  z-index: 3;
   &__address {
     margin-right: auto;
     display: flex;
@@ -113,3 +114,8 @@
   }
 }
 
+@media screen and (max-width: 660px) {
+  .block {
+    margin-bottom: 10px;
+  }
+}

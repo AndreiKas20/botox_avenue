@@ -237,5 +237,47 @@
     flex-direction: column;
     align-items: center;
   }
+  .blockImgRightSide {
+    margin-bottom: 15px;
+  }
 }
 
+@media screen and (max-width: 850px) {
+  .iconBackLine2 {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .imgBotox {
+    width: 310px;
+  }
+  .iconLogo {
+    right: -50px;
+  }
+  .blockImg {
+    &:before {
+      width: 140%;
+      left: -60px;
+    }
+  }
+  .subtitle {
+    font-size: 24px;
+  }
+  .listServ {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .block {
+    padding: 20px 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .blockImg {
+    transform: scale(.8);
+    margin-bottom: 23px;
+  }
+}

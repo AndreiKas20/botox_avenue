@@ -18,7 +18,7 @@ const Services = () => {
         <div className={styles.container}>
             <div className={styles.photoBlock}> <img className={styles.photo} src={photoServ} alt={'Фото'}/> </div>
             <div className={styles.block}>
-                <h2 id={'serv'} className={styles.title}>НАШИ <span>УСЛУГИ</span> </h2>
+                <h2 id={'serv'} className={styles.title}>НАШИ <span>УСЛУГИ</span></h2>
                 <ul className={styles.listServices}>
                     <li className={styles.listServices__item}><img className={styles.icon} alt={'icon'} src={botox}/> <a href={'#botox'}>Ботокс</a> </li>
                     <li className={styles.listServices__item}><img className={styles.icon} alt={'icon'} src={plastic}/> <a href={'#plastic'}>Пластика</a></li>
