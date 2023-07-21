@@ -256,7 +256,7 @@ const MoreServices = () => {
                             </button>
                         </li>
                         <li className={styles.blockServ}>
-                            <h3 id={'nanoplastic'} className={styles.subtitle}>Нанопластика</h3>
+                            <h3 id={'nanoplast'} className={styles.subtitle}>Нанопластика</h3>
                             <ul className={styles.listServ}>
                                 <li className={styles.listServ__item}>Выпрямление тугого завитка. Кудри в све прежнее
                                     состояние не возвращаются
