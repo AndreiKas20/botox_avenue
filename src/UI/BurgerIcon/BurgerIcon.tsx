@@ -1,16 +1,23 @@
 import React from 'react';
 import styles from './BurgerIcon.module.scss'
 
-const BurgerIcon = () => {
+interface IBurger {
+    onClick: (e: React.MouseEvent<HTMLInputElement>) => void
+    isOpen: boolean
+}
+
+const BurgerIcon = ({onClick, isOpen}: IBurger) => {
     return (
-        <div className={styles.block}>
+        <button className={styles.block}>
             <label htmlFor="check">
-                <input type="checkbox" id="check"/>
+                <input checked={isOpen}  onClick={(e) => {
+                    onClick(e)
+                }} type="checkbox" id="check"/>
                 <span></span>
                 <span></span>
                 <span></span>
             </label>
-        </div>
+        </button>
     );
 };
 

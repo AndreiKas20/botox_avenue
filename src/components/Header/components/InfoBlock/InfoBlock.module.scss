@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 68px;
-  z-index: 3;
+  z-index: 1201;
   &__address {
     margin-right: auto;
     display: flex;
@@ -111,6 +111,20 @@
     &:active {
       color: #8c7878;
     }
+  }
+}
+
+.burgerList {
+  max-width: 300px;
+  &__item {
+    cursor: pointer;
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 155.4%;
+    color: #FFF;
+    transition: .2s color ease-in-out;
   }
 }
 
