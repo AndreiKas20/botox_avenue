@@ -26,16 +26,16 @@ const theme = createTheme({
 });
 
 
-
 const OrderCall = () => {
     const [phoneNumber, setPhoneNumber] = useState('')
     const [nameValue, setNameValue] = useState('')
     const [isCompliedPostOpen, setIsCompliedPostOpen] = useState(false)
     const [isWarningPostOpen, setIsWarningPostOpen] = useState(false)
     const [isImg, setIsImg] = useState(true)
+    const [isButtonDisabled, setIsButtonDisabled] = useState(true)
 
-    const handlePhoneChange = (value:string) => {
-        if (value.replace(/ /g,'').length > 12) return
+    const handlePhoneChange = (value: string) => {
+        if (value.replace(/ /g, '').length > 12) return
         setPhoneNumber(`${value}`)
     }
 
@@ -43,8 +43,8 @@ const OrderCall = () => {
 
 
     const postMessage = (phoneValue: string, nameValue: string) => {
-        const  chatId  = '-1001940568576'
-        const  token  = '6276538479:AAEPErYobMSKbLhDbCeZWsSReIkYcRXlUKw'
+        const chatId = '-1001940568576'
+        const token = '6276538479:AAEPErYobMSKbLhDbCeZWsSReIkYcRXlUKw'
         const link = `https://api.telegram.org/bot${token}/sendMessage`
         const message = `Телефон:<b>${phoneValue}</b>. Имя: <b>${nameValue}</b>.`
         if (!chatId || !token) {
@@ -56,9 +56,33 @@ const OrderCall = () => {
                 parse_mode: 'html',
                 text: message,
             })
-            .then(() => {setIsCompliedPostOpen(true)})
-            .catch((error) => {setIsWarningPostOpen(true)})
+            .then(() => {
+                setIsCompliedPostOpen(true)
+                setIsButtonDisabled(true)
+                const timer = setTimeout(() => {
+                    setIsCompliedPostOpen(false)
+                    setIsButtonDisabled(false)
+                }, 5000)
+                return () => clearTimeout(timer)
+            })
+            .catch((error) => {
+                setIsWarningPostOpen(true)
+            })
     }
+
+    useEffect(() => {
+        if (phoneNumber.length > 10) {
+            setIsButtonDisabled(false)
+        } else {
+            setIsButtonDisabled(true)
+        }
+        if (nameValue.length >= 2) {
+            setIsButtonDisabled(false)
+        } else {
+            setIsButtonDisabled(true)
+        }
+    }, [phoneNumber, nameValue]);
+
 
     useEffect(() => {
         if (size < 1250) {
@@ -79,14 +103,18 @@ const OrderCall = () => {
                         className={styles.block__leftBlock__form}
                         component="form"
                         sx={{
-                            '& > :not(style)': { m: 1 },
+                            '& > :not(style)': {m: 1},
                         }}
                         noValidate
                         autoComplete="off"
                     >
-                        <MuiTelInput label={'Ваш номер телефона'} color={'secondary'} className={styles.inputForm} defaultCountry={'RU'} value={phoneNumber} onChange={handlePhoneChange} />
-                        <TextField onChange={(name) => setNameValue(name.target.value)} color={'secondary'} className={styles.inputForm} id="outlined-basic" label="Ваше имя" variant="outlined" />
-                        <Button onClick={() => postMessage(phoneNumber, nameValue)} className={styles.btn} variant="contained">Записаться</Button>
+                        <MuiTelInput label={'Ваш номер телефона'} color={'secondary'} className={styles.inputForm}
+                                     defaultCountry={'RU'} value={phoneNumber} onChange={handlePhoneChange}/>
+                        <TextField onChange={(name) => setNameValue(name.target.value)} color={'secondary'}
+                                   className={styles.inputForm} id="outlined-basic" label="Ваше имя"
+                                   variant="outlined"/>
+                        <Button disabled={isButtonDisabled} onClick={() => postMessage(phoneNumber, nameValue)}
+                                className={styles.btn} variant="contained">Записаться</Button>
                         <Collapse className={styles.message} in={isCompliedPostOpen}>
                             <Alert
                                 action={
@@ -98,10 +126,10 @@ const OrderCall = () => {
                                             setIsCompliedPostOpen(false);
                                         }}
                                     >
-                                        <CloseIcon fontSize="inherit" />
+                                        <CloseIcon fontSize="inherit"/>
                                     </IconButton>
                                 }
-                                sx={{ mb: 2 }}
+                                sx={{mb: 2}}
                             >
                                 Вы успешно оставили номер! В ближайшее время вам перезвонит наш специалист.
                             </Alert>
@@ -118,10 +146,10 @@ const OrderCall = () => {
                                             setIsWarningPostOpen(false);
                                         }}
                                     >
-                                        <CloseIcon fontSize="inherit" />
+                                        <CloseIcon fontSize="inherit"/>
                                     </IconButton>
                                 }
-                                sx={{ mb: 2 }}
+                                sx={{mb: 2}}
                             >
                                 Произошла ошибка! Заявка не была доставлена по техническим причинам.
                             </Alert>

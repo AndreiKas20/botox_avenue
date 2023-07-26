@@ -89,7 +89,6 @@ const InfoBlock = () => {
 
                 <div className={styles.burgerBlock}>
                     <BurgerIcon isOpen={isBurgerOpen} onClick={(e:React.MouseEvent<HTMLInputElement>) => {
-                        console.log('clock')
                         setIsBurgerOpen(prevState => !prevState)
                     }}/>
                     <Drawer

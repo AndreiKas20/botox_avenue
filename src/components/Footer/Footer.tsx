@@ -2,25 +2,29 @@ import React, {useEffect, useState} from 'react';
 import {Map, Placemark, YMaps} from '@pbe/react-yandex-maps';
 import styles from './Footer.module.scss'
 import iconLogo from "../../assets/img/icons/logo_white.png";
+import {useResize} from "../../hooks/useResize";
 
 const Footer = () => {
 
     const [isLoadMap, setIsLoadMap] = useState(false)
-
+    const widthSize = useResize()
     const handleScroll = () => {
         const currentPosition = window.scrollY;
-        console.log('pos', currentPosition)
         if (currentPosition > 5500) {
             setIsLoadMap(true)
         }
     };
 
     useEffect(() => {
+        if(widthSize > 1250) {
+            setIsLoadMap(true)
+            return
+        }
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [widthSize]);
 
     return (
         <>
