@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import styles from './MoreServices.module.scss'
-import botox from '../../assets/img/botox_img.jpg';
+import botox from '../../assets/img/botox_img.webp';
 import img2 from '../../assets/img/serv_img2.webp'
 import img3 from '../../assets/img/serv_img3.webp'
 import img4 from '../../assets/img/serv_img4.webp'
