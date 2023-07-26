@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import styles from './MoreServices.module.scss'
 import botox from '../../assets/img/botox_img.jpg';
-import img2 from '../../assets/img/serv_img2.jpg'
-import img3 from '../../assets/img/serv_img3.jpg'
-import img4 from '../../assets/img/serv_img4.jpg'
+import img2 from '../../assets/img/serv_img2.webp'
+import img3 from '../../assets/img/serv_img3.webp'
+import img4 from '../../assets/img/serv_img4.webp'
 import iconBack1 from '../../assets/img/icons/line_serv1.svg'
 import iconBack2 from '../../assets/img/icons/line_serv2.svg'
 import iconBack3 from '../../assets/img/icons/els_serv.svg'

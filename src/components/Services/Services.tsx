@@ -9,7 +9,7 @@ import nano from '../../assets/img/icons/hair-salon-spray-bottle-svgrepo-com.svg
 import piling from '../../assets/img/icons/hair-wig-long-and-black-shape-svgrepo-com.svg'
 import scissors from '../../assets/img/icons/scissors-svgrepo-com.svg'
 import line from '../../assets/img/icons/Line.svg'
-import photoServ from '../../assets/img/photo_services.jpg'
+import photoServ from '../../assets/img/photo_services.webp'
 import SignUpBtn from "../../UI/SignUpBtn/SignUpBtn";
 
 

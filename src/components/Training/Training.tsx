@@ -10,7 +10,7 @@ import PracticIcon from '@mui/icons-material/BackHandOutlined';
 import TeoryIcon from '@mui/icons-material/AccessTimeOutlined';
 import MetodIcon from '@mui/icons-material/AccountBalanceWalletOutlined';
 import ModelIcon from '@mui/icons-material/Diversity1Outlined';
-import imgTeach from '../../assets/img/teach.jpg'
+import imgTeach from '../../assets/img/teach.webp'
 import ellipse from '../../assets/img/icons/elipse_teach.svg'
 import iconLogo from '../../assets/img/icons/logo_white.png'
 import backPrice from '../../assets/img/icons/back_price.svg'

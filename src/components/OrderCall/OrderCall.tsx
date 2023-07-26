@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
 import Button from '@mui/material/Button';
 import CloseIcon from '@mui/icons-material/Close';
-import imgContact from '../../assets/img/img_contact _section.jpg'
+import imgContact from '../../assets/img/img_contact-_section.webp'
 import iconLogo from "../../assets/img/icons/logo_white.png";
 import iconBack4 from "../../assets/img/icons/vector_serv.svg";
 import axios from "axios";
