@@ -71,12 +71,8 @@ const OrderCall = () => {
     }
 
     useEffect(() => {
-        if (phoneNumber.length > 10) {
-            setIsButtonDisabled(false)
-        } else {
-            setIsButtonDisabled(true)
-        }
-        if (nameValue.length >= 2) {
+        console.log('phone', phoneNumber, phoneNumber.length)
+        if (phoneNumber.length > 10 && nameValue.length >= 2) {
             setIsButtonDisabled(false)
         } else {
             setIsButtonDisabled(true)

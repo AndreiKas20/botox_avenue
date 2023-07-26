@@ -103,6 +103,11 @@
   .block {
     padding: 52px 60px;
   }
+  .btn {
+    &:hover {
+      color: #eaa4a4 !important;
+    }
+  }
 }
 
 @media screen and (max-width: 1250px) {
