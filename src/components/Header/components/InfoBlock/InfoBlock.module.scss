@@ -4,11 +4,12 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 68px;
-  z-index: 1201;
+  z-index: 10;
   &__address {
     margin-right: auto;
     display: flex;
     align-items: center;
+    z-index: -1;
   }
   &__listSocial {
     display: flex;
@@ -126,6 +127,24 @@
     color: #FFF;
     transition: .2s color ease-in-out;
   }
+  &__mapBlock {
+    width: 300px;
+    height: 380px;
+    box-shadow: 0 0 20px 10px #eaa4a4;
+  }
+}
+
+.burgerBlock {
+  position: absolute;
+  top: 25px;
+  right: 45px;
+  z-index: 1212112;
+}
+
+
+.burgerMap {
+  width: 300px;
+  height: 380px;
 }
 
 @media screen and (max-width: 660px) {

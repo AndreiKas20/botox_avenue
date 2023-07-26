@@ -1,6 +1,8 @@
 .block {
-  position: relative;
-  z-index: 5;
+  position: absolute;
+  z-index: 1202;
+  top: 0;
+  right: -20px;
   label{
     display:flex;
     flex-direction:column;
