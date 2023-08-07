@@ -17,6 +17,8 @@
 .imgBotox {
   position: relative;
   margin-right: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 10px #eaa4a4;
   z-index: 2;
 }
 
@@ -26,16 +28,6 @@
   height: fit-content;
   width: fit-content;
   margin-bottom: 92px;
-  &:before {
-    content: '';
-    position: absolute;
-    width: 150%;
-    height: 77%;
-    bottom: -65px;
-    left: -93px;
-    background-color: #eaa4a4;
-    z-index: 1;
-  }
 }
 
 .blockServ {
