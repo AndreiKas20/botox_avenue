@@ -15,6 +15,18 @@ import ellipse from '../../assets/img/icons/elipse_teach.svg'
 import iconLogo from '../../assets/img/icons/logo_white.png'
 import backPrice from '../../assets/img/icons/back_price.svg'
 import linePrice from '../../assets/img/icons/line_price.svg'
+import {createTheme, ThemeProvider} from "@mui/material";
+
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: '#FFF',
+        },
+        secondary: {
+            main: '#c59db7',
+        },
+    },
+});
 
 const Training = () => {
     return (
@@ -29,12 +41,15 @@ const Training = () => {
                 </h2>
 
                 <ul className={styles.list}>
-                    <li className={styles.list__item}><NoBrendIcon color={"warning"}/> Без привязки к бренду</li>
-                    <li className={styles.list__item}><TeoryIcon color={"warning"}/> Теория 5 часов</li>
-                    <li className={styles.list__item}><PracticIcon color={"warning"}/> Практика 5-10 часов</li>
-                    <li className={styles.list__item}><CertifyIcon color={"warning"}/> 3 сертификата</li>
-                    <li className={styles.list__item}><MetodIcon color={"warning"}/> Методичка (рабочая тетрадь)</li>
-                    <li className={styles.list__item}><ModelIcon color={"warning"}/> Модели для процедур</li>
+                    <ThemeProvider theme={theme}>
+                        <li className={styles.list__item}><NoBrendIcon color={"secondary"}/> Без привязки к бренду</li>
+                        <li className={styles.list__item}><TeoryIcon color={"secondary"}/> Теория 5 часов</li>
+                        <li className={styles.list__item}><PracticIcon color={"secondary"}/> Практика 5-10 часов</li>
+                        <li className={styles.list__item}><CertifyIcon color={"secondary"}/> 3 сертификата</li>
+                        <li className={styles.list__item}><MetodIcon color={"secondary"}/> Методичка (рабочая тетрадь)
+                        </li>
+                        <li className={styles.list__item}><ModelIcon color={"secondary"}/> Модели для процедур</li>
+                    </ThemeProvider>
                 </ul>
                 <div className={styles.blockAcc}>
                     <div className={styles.blockAcc__leftAcc}>

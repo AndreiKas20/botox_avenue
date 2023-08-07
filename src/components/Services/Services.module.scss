@@ -16,7 +16,7 @@
     position: absolute;
     width: 700px;
     height: 384px;
-    background-color: #eaa4a4;
+    background-color: #c59db7;
     bottom: -70px;
     left: -86px;
     z-index: -1;
@@ -48,7 +48,7 @@
   color: #312C38;
   z-index: 3;
   span {
-    color: #eaa4a4;
+    color: #c59db7;
     position: relative;
   };
 }
@@ -86,7 +86,7 @@
     line-height: 164.9%;
     transition: .2s ease-in-out color;
     &:hover {
-      color: #eaa4a4;
+      color: #c59db7;
     }
     &:active {
       color: #704d4d;
@@ -172,7 +172,7 @@
       position: absolute;
       width: 350px;
       height: 180px;
-      background-color: #eaa4a4;
+      background-color: #c59db7;
       bottom: -50px;
       left: -20px;
       z-index: -1;

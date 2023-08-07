@@ -20,7 +20,7 @@ const theme = createTheme({
             main: '#FFF',
         },
         secondary: {
-            main: '#eaa4a4',
+            main: '#c59db7',
         },
     },
 });

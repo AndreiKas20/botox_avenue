@@ -17,7 +17,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 112.2%;
-    color: #eaa4a4;
+    color: #c59db7;
     &:before {
       content: '';
       position: absolute;
@@ -90,13 +90,13 @@
   font-weight: 600 !important;
   line-height: 138.2%; /* 27.64px */
   text-transform: uppercase;
-  color: #eaa4a4 !important;
+  color: #c59db7 !important;
   transition: .2s ease-in-out color;
   &:hover {
-    color: #e1bdb5 !important;
+    color: #beacb8 !important;
   }
   &:active {
-    color: #ec826a !important;
+    color: #c786b0 !important;
   }
 }
 
@@ -125,7 +125,7 @@
     height: 70%;
     left: -25px;
     bottom: -45px;
-    background-color: #eaa4a4;
+    background-color: #c59db7;
     z-index: -1;
   }
 }

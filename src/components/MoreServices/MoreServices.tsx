@@ -315,15 +315,15 @@ const MoreServices = () => {
                             </FormControl>
                             <FormGroup>
                                 <FormControlLabel control={<Checkbox onChange={(event, checked) => {setIsFirstCheck(checked)}} sx={{
-                                    color: '#eaa4a4',
+                                    color: '#c59db7',
                                     '&.Mui-checked': {
-                                        color: '#eaa4a4',
+                                        color: '#c59db7',
                                     },
                                 }}/>} label="У вас нарощенные волосы?"/>
                                 <FormControlLabel control={<Checkbox onChange={(event, checked) => {setIsSecondCheck(checked)}} sx={{
-                                    color: '#eaa4a4',
+                                    color: '#c59db7',
                                     '&.Mui-checked': {
-                                        color: '#eaa4a4',
+                                        color: '#c59db7',
                                     },
                                 }}/>} label="У вас густые волосы?"/>
                             </FormGroup>
@@ -333,21 +333,21 @@ const MoreServices = () => {
                         isHairEnd &&
                         <div>
                             <FormControlLabel control={<Checkbox onChange={(event, checked) => {setIsPolishingHair(checked)}} sx={{
-                                color: '#eaa4a4',
+                                color: '#c59db7',
                                 '&.Mui-checked': {
-                                    color: '#eaa4a4',
+                                    color: '#c59db7',
                                 },
                             }}/>} label="Полировка волос"/>
                             <FormControlLabel control={<Checkbox disabled={!isPolishingHair} onChange={(event, checked) =>{setIsCloseHairEnd(checked)}} sx={{
-                                color: '#eaa4a4',
+                                color: '#c59db7',
                                 '&.Mui-checked': {
-                                    color: '#eaa4a4',
+                                    color: '#c59db7',
                                 },
                             }}/>} label="+ Запечатывание кончиков"/>
                             <FormControlLabel control={<Checkbox disabled={!isCloseHairEnd} onChange={(event, checked) => {setIsCoolHair(checked)}} sx={{
-                                color: '#eaa4a4',
+                                color: '#c59db7',
                                 '&.Mui-checked': {
-                                    color: '#eaa4a4',
+                                    color: '#c59db7',
                                 },
                             }}/>} label="+ Глубокое кондиционирование"/>
                         </div>
