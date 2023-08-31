@@ -15,8 +15,10 @@
     display: flex;
     align-items: center;
     &__item {
+      position: relative;
       margin-right: 24px;
       a {
+        position: relative;
         svg {
           path {
            transition: .2s ease-in-out fill;

@@ -56,6 +56,10 @@ const OrderCall = () => {
                 parse_mode: 'html',
                 text: message,
             })
+            .finally(() => {
+                setPhoneNumber('')
+                setNameValue('')
+            })
             .then(() => {
                 setIsCompliedPostOpen(true)
                 setIsButtonDisabled(true)
@@ -105,7 +109,7 @@ const OrderCall = () => {
                     >
                         <MuiTelInput label={'Ваш номер телефона'} color={'secondary'} className={styles.inputForm}
                                      defaultCountry={'RU'} value={phoneNumber} onChange={handlePhoneChange}/>
-                        <TextField onChange={(name) => setNameValue(name.target.value)} color={'secondary'}
+                        <TextField value={nameValue} onChange={(name) => setNameValue(name.target.value)} color={'secondary'}
                                    className={styles.inputForm} id="outlined-basic" label="Ваше имя"
                                    variant="outlined"/>
                         <Button disabled={isButtonDisabled} onClick={() => postMessage(phoneNumber, nameValue)}

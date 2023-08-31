@@ -86,7 +86,6 @@ const InfoBlock = () => {
             </div>
             {
                 isBurger &&
-
                 <div className={styles.burgerBlock}>
                     <BurgerIcon isOpen={isBurgerOpen} onClick={(e:React.MouseEvent<HTMLInputElement>) => {
                         setIsBurgerOpen(prevState => !prevState)
@@ -107,7 +106,7 @@ const InfoBlock = () => {
                                 <li className={styles.burgerList__item}>
                                     <ul className={styles.block__listSocial}>
                                         <li className={styles.block__listSocial__item}>
-                                            <a target={'_blank'} href={'https://vk.com/botox_avenue'}>
+                                            <a style={{top: '-4px'}} target={'_blank'} href={'https://vk.com/botox_avenue'}>
                                                 <svg width="30" height="17" viewBox="0 0 30 17" fill="none"
                                                      xmlns="http://www.w3.org/2000/svg">
                                                     <path fillRule="evenodd" clipRule="evenodd"
