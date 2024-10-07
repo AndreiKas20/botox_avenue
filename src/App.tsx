@@ -18,8 +18,8 @@ function App() {
                 <Training/>
                 <OrderCall/>
                 <Footer/>
-            </Container>
-        </div>
+            </Container>0
+0        </div>
     );
 }
 
