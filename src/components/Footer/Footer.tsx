@@ -42,6 +42,7 @@ const Footer = () => {
                 </div>
                 <address className={styles.rightSide}>
                     <div>
+                        <div className='webs_1283'/>
                         <div className={styles.addressBlock}>
                             <span className={styles.addressBlock__addressWord}>Контакты</span>
                             <span

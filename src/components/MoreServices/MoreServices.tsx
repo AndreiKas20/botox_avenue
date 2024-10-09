@@ -142,6 +142,7 @@ const MoreServices = () => {
                             }} className={styles.btnAccordion}>Узнать цену
                             </button>
                         </li>
+                        <div className='webs_1283'/>
                         <li className={styles.blockServ}>
                             <h3 id={'sos'} className={styles.subtitle}>SOS-уход</h3>
                             <ul className={styles.listServ}>
@@ -199,7 +200,7 @@ const MoreServices = () => {
                         </li>
                     </ul>
                     {
-                        !isMobile && <SignUpBtn color={"white"}/>
+                    !isMobile && <SignUpBtn color={"white"}/>
                     }
                 </div>
                 <div className={styles.rightSide}>
