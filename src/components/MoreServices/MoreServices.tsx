@@ -142,7 +142,7 @@ const MoreServices = () => {
                             }} className={styles.btnAccordion}>Узнать цену
                             </button>
                         </li>
-                        <div className='webs_1283'/>
+                        <div className='webs_6'/>
                         <li className={styles.blockServ}>
                             <h3 id={'sos'} className={styles.subtitle}>SOS-уход</h3>
                             <ul className={styles.listServ}>
